@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import {incNumber, decNumber, resetNumber, divNumber, mulNumber} from "../reduxFiles/actions/actionIndex";
 
 const stateToProps = (state) => {
-  console.log(state);
+ 
   return {
     num: state.incDecRED,
   };
@@ -14,27 +14,27 @@ class Base extends Component {
   render() {
     //   const myState = useSelector((state) => state.incDecRED);
     return (
-      <div>
+      <div className="text-center">
         <h2>Inc/Dec Button : </h2>
         <h1> {this.props.num} </h1>
 
-        <button onClick={()=>{this.props.dispatch(decNumber())}}>
-          <p>( - )</p>
+        <button className="btn btn-primary m-2" onClick={()=>{this.props.dispatch(decNumber())}}>
+          <p>-</p>
         </button>
         <span>
-          <button onClick={()=>{this.props.dispatch(incNumber())}}>
-            <p>( + )</p>
+          <button className="btn btn-primary m-2" onClick={()=>{this.props.dispatch(incNumber())}}>
+            <p>+</p>
           </button>
         </span>
-        <button onClick={()=>{this.props.dispatch(resetNumber())}}>
-            <p>( Reset )</p>
+        <button className="btn btn-primary m-2" onClick={()=>{this.props.dispatch(resetNumber())}}>
+            <p>Reset</p>
           </button>
 
-          <button onClick={()=>{this.props.dispatch(divNumber())}}>
-            <p>( DIV by 5 )</p>
+          <button className="btn btn-primary m-2" onClick={()=>{this.props.dispatch(divNumber())}}>
+            <p>DIV by 5</p>
           </button>
-          <button onClick={()=>{this.props.dispatch(mulNumber())}}>
-            <p>( Mul by 5 )</p>
+          <button className="btn btn-primary m-2" onClick={()=>{this.props.dispatch(mulNumber())}}>
+            <p>Mul by 5</p>
           </button>
       </div>
     );

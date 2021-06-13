@@ -27,3 +27,9 @@ export const divNumber=()=>{
         type: "DIV",
     }
 }
+
+export const conRED=()=>{
+    return{
+        type:"ADD_VALUS_",
+    }
+}
